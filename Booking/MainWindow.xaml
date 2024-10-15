@@ -1,0 +1,95 @@
+﻿<Window x:Class="Booking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Booking"
+        mc:Ignorable="d"
+        Title="Booking Management" Height="350" Width="600">
+    
+    <TabControl>
+        <TabItem Header="Bookings">
+            <Grid>
+                <DataGrid
+                    ItemsSource="{Binding Bookings}"
+                    SelectedItem="{Binding SelectedBooking}"
+                    CanUserAddRows="False"
+                    CanUserDeleteRows="False"
+                    AutoGenerateColumns="False" 
+                    Margin="10">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding BookingId}" 
+                                            IsReadOnly="True" Width="50"/>
+                        <DataGridTextColumn Header="Service Name" Binding="{Binding ServiceName}" 
+                                            IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="Start Date" Binding="{Binding StartDate}" 
+                                            IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="End Date" Binding="{Binding EndDate}" 
+                                            IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="Is Confirmed" Binding="{Binding IsConfirmed}" 
+                                            IsReadOnly="True" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Bottom" 
+                            Margin="10">
+                    <Button 
+                        Content="Add" 
+                        Margin="5" 
+                        Command="{Binding AddBookingCommand}"/>
+                    <Button 
+                        Content="Delete" 
+                        Margin="5" 
+                        Command="{Binding DeleteBookingCommand}"/>
+                    <Button 
+                        Content="Update" 
+                        Margin="5" 
+                        Command="{Binding UpdateBookingCommand}"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="Clients">
+            <Grid>
+                <DataGrid ItemsSource="{Binding Clients}"
+                          SelectedItem="{Binding SelectedClient}"
+                          CanUserAddRows="False"
+                          CanUserDeleteRows="False"
+                          AutoGenerateColumns="False" 
+                          Margin="10">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding ClientId}" 
+                                            IsReadOnly="True" Width="50"/>
+                        <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" 
+                                            IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="Contact Email" Binding="{Binding ContactEmail}" 
+                                            IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="Contact Number" Binding="{Binding ContactNumber}" 
+                                            IsReadOnly="True" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Bottom" 
+                            Margin="10">
+                    <Button 
+                        Content="Add" 
+                        Margin="5" 
+                        Command="{Binding AddClientCommand}"/>
+                    <Button 
+                        Content="Delete" 
+                        Margin="5" 
+                        Command="{Binding DeleteClientCommand}"/>
+                    <Button 
+                        Content="Update" 
+                        Margin="5" 
+                        Command="{Binding UpdateClientCommand}"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+    </TabControl>
+
+</Window>

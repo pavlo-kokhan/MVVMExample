@@ -1,0 +1,16 @@
+﻿[
+  {
+    "BookingId": 1,
+    "ServiceName": "Booking of room #5",
+    "StartDate": "2024-10-13T00:00:00",
+    "EndDate": "2024-10-20T00:00:00",
+    "IsConfirmed": true
+  },
+  {
+    "BookingId": 2,
+    "ServiceName": "Booking rooom #12",
+    "StartDate": "2024-10-15T00:00:00",
+    "EndDate": "2024-10-30T00:00:00",
+    "IsConfirmed": false
+  }
+]

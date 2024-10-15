@@ -1,0 +1,14 @@
+﻿[
+  {
+    "ClientId": 1,
+    "FullName": "Pavlo Kokhan",
+    "ContactEmail": "pavlokokhan@gmail.com",
+    "ContactNumber": "380962229023"
+  },
+  {
+    "ClientId": 3,
+    "FullName": "Ivan Ivanenko",
+    "ContactEmail": "petrenko12@gmail.com",
+    "ContactNumber": "380971112385"
+  }
+]
